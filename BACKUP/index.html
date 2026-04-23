@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Rivera — Portfolio</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Custom Cursor Elements -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="#" class="nav-logo">Alex<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-bg-line"></div>
+  <div class="hero-bg-circle"></div>
+  <div class="hero-bg-circle2"></div>
+
+  <div class="hero-left">
+    <p class="hero-eyebrow">Available for Projects</p>
+    <h1 class="hero-title">
+      Creative<br/>
+      <em>Designer</em><br/>
+      &amp; Developer
+    </h1>
+    <p class="hero-desc">
+      I craft purposeful digital experiences that sit at the intersection of art and engineering — clean in form, precise in function.
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn-primary">View Work</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <div class="placeholder-avatar">
+          <div class="avatar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="stroke:var(--gold)">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <span class="placeholder-label">Your Photo Here</span>
+        </div>
+      </div>
+      <div class="hero-photo-deco"></div>
+      <div class="hero-photo-deco2"></div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">40</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">28</div>
+          <div class="stat-label">Clients</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <p class="section-tag reveal">About Me</p>
+      <h2 class="section-title reveal reveal-delay-1">Designing with <em>purpose</em></h2>
+      <p class="section-sub reveal reveal-delay-2">
+        Every pixel has a reason. Every line of code serves the experience.
+      </p>
+    </div>
+    <div class="about-right">
+      <p class="reveal">
+        Hello — I'm <strong>Alex Rivera</strong>, a multidisciplinary designer and front-end developer based in San Francisco. I specialise in creating digital experiences that are not just visually refined, but deeply functional and user-centred.
+      </p>
+      <p class="reveal reveal-delay-1">
+        With over five years in the industry, I've collaborated with startups, established brands, and creative agencies to ship products that balance <strong>aesthetic elegance</strong> with measurable business outcomes.
+      </p>
+      <p class="reveal reveal-delay-2">
+        My approach blends systematic design thinking with a love of craft — bringing together brand strategy, interaction design, and clean front-end engineering into a single, coherent workflow.
+      </p>
+      <div class="skills-grid reveal reveal-delay-3">
+        <div class="skill-item"><div class="skill-dot"></div>UI / UX Design</div>
+        <div class="skill-item"><div class="skill-dot"></div>React / Next.js</div>
+        <div class="skill-item"><div class="skill-dot"></div>Brand Identity</div>
+        <div class="skill-item"><div class="skill-dot"></div>TypeScript</div>
+        <div class="skill-item"><div class="skill-dot"></div>Motion Design</div>
+        <div class="skill-item"><div class="skill-dot"></div>Figma / Framer</div>
+        <div class="skill-item"><div class="skill-dot"></div>Design Systems</div>
+        <div class="skill-item"><div class="skill-dot"></div>Node / APIs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Work Section -->
+<section class="work" id="work">
+  <p class="section-tag reveal">Selected Work</p>
+  <h2 class="section-title reveal reveal-delay-1">Recent <em>Projects</em></h2>
+  <p class="section-sub reveal reveal-delay-2">A curated selection of work spanning product design, branding, and development.</p>
+
+  <div class="projects-list">
+    <a href="#" class="project-item reveal">
+      <div class="project-num">01</div>
+      <div class="project-name">Lumina Dashboard</div>
+      <div class="project-desc">Analytics platform redesign for a SaaS company — improved activation rate by 34%.</div>
+      <div class="project-tag">UX Design</div>
+      <div class="project-arrow">→</div>
+    </a>
+    <a href="#" class="project-item reveal reveal-delay-1">
+      <div class="project-num">02</div>
+      <div class="project-name">Verdure Branding</div>
+      <div class="project-desc">End-to-end visual identity for a sustainable lifestyle brand launching globally.</div>
+      <div class="project-tag">Branding</div>
+      <div class="project-arrow">→</div>
+    </a>
+    <a href="#" class="project-item reveal reveal-delay-2">
+      <div class="project-num">03</div>
+      <div class="project-name">Pulse Mobile App</div>
+      <div class="project-desc">Health-tracking app from concept to production — 50k downloads in first month.</div>
+      <div class="project-tag">Product</div>
+      <div class="project-arrow">→</div>
+    </a>
+    <a href="#" class="project-item reveal reveal-delay-3">
+      <div class="project-num">04</div>
+      <div class="project-name">Arca E-Commerce</div>
+      <div class="project-desc">Custom Shopify frontend with immersive 3D product viewer and silky-smooth checkout.</div>
+      <div class="project-tag">Development</div>
+      <div class="project-arrow">→</div>
+    </a>
+    <a href="#" class="project-item reveal reveal-delay-4">
+      <div class="project-num">05</div>
+      <div class="project-name">Studio Eleven Website</div>
+      <div class="project-desc">Award-winning portfolio site for a photography collective in New York.</div>
+      <div class="project-tag">Web Design</div>
+      <div class="project-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Experience Section -->
+<section class="experience" id="experience">
+  <p class="section-tag reveal">Experience</p>
+  <h2 class="section-title reveal reveal-delay-1">Where I've <em>worked</em></h2>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2022 — Present</div>
+      <div class="timeline-line"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">Senior Product Designer</div>
+        <div class="timeline-company">Vertex Labs, San Francisco</div>
+        <div class="timeline-text">Leading design across three product lines. Built and maintained a company-wide design system adopted by 12 engineers. Shipped four major product releases.</div>
+      </div>
+    </div>
+    <div class="timeline-item reveal reveal-delay-1">
+      <div class="timeline-date">2020 — 2022</div>
+      <div class="timeline-line"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">UI/UX Designer</div>
+        <div class="timeline-company">Fable Agency, New York</div>
+        <div class="timeline-text">Worked with clients across fintech, health, and consumer sectors. Owned the end-to-end design process from discovery through to developer handoff.</div>
+      </div>
+    </div>
+    <div class="timeline-item reveal reveal-delay-2">
+      <div class="timeline-date">2018 — 2020</div>
+      <div class="timeline-line"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">Front-End Developer</div>
+        <div class="timeline-company">Kairos Studio, Remote</div>
+        <div class="timeline-text">Built performant, accessible web experiences for e-commerce and editorial clients. Specialised in CSS animations and JavaScript interactions.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <p class="section-tag reveal">What I Do</p>
+  <h2 class="section-title reveal reveal-delay-1">Areas of <em>Expertise</em></h2>
+  <p class="section-sub reveal reveal-delay-2">End-to-end capability from initial concept to shipped product.</p>
+
+  <div class="services-grid reveal reveal-delay-3">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+      </div>
+      <div class="service-name">Product Design</div>
+      <div class="service-desc">From initial wireframes to high-fidelity interfaces. Grounded in user research and shaped by iterative testing until every interaction feels inevitable.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="service-name">Web Development</div>
+      <div class="service-desc">Translating design into precise, performant code. React, Next.js, and TypeScript with a deep attention to accessibility, animation, and smooth interactions.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
+      <div class="service-name">Brand Identity</div>
+      <div class="service-desc">Visual systems that communicate clearly and endure. Logo, typography, colour, and the full toolkit for a cohesive brand presence across every touchpoint.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-tag reveal">Get in Touch</p>
+      <h2 class="section-title reveal reveal-delay-1">Let's <em>work</em><br/>together</h2>
+      <p class="section-sub reveal reveal-delay-2">Have a project in mind? I'd love to hear about it. Fill in the form or reach out directly.</p>
+
+      <div class="contact-info reveal reveal-delay-3">
+        <div class="contact-block">
+          <div class="contact-block-label">Email</div>
+          <div class="contact-block-val">hello@alexrivera.co</div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-block-label">Location</div>
+          <div class="contact-block-val">San Francisco, CA</div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-block-label">Socials</div>
+          <div class="social-row">
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Dribbble">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Jane"/>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Doe"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="jane@example.com"/>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Project inquiry"/>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="6" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="btn-primary" style="align-self:flex-start; border:none; padding:1rem 2.5rem; font-size:0.75rem;">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Alex<span>Rivera</span></div>
+  <div class="footer-copy">© 2025 Alex Rivera. All rights reserved.</div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
