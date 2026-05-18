@@ -62,3 +62,108 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ========== EMAILJS INTEGRATION ==========
+// Initialize EmailJS with your Public Key
+// IMPORTANT: Replace 'YOUR_PUBLIC_KEY_HERE' with your actual EmailJS public key
+(function initEmailJS() {
+  emailjs.init({
+    publicKey: 'uQ_VIladU3rbQHh5J', // <-- REPLACE THIS
+  });
+})();
+
+// Email sending functionality
+const sendBtn = document.getElementById('sendMessageBtn');
+const statusDiv = document.getElementById('form-status');
+
+// Function to show status message
+function showStatus(message, isError = false) {
+  statusDiv.textContent = message;
+  statusDiv.style.color = isError ? '#e74c3c' : 'var(--gold)';
+  statusDiv.style.fontSize = '0.8rem';
+  statusDiv.style.marginTop = '1rem';
+  statusDiv.style.opacity = '1';
+  
+  // Auto-hide after 5 seconds
+  setTimeout(() => {
+    statusDiv.style.opacity = '0';
+    setTimeout(() => {
+      if (statusDiv.style.opacity === '0') {
+        statusDiv.textContent = '';
+      }
+    }, 500);
+  }, 5000);
+}
+
+// Function to validate form
+function validateForm() {
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+  
+  if (!fname || !lname || !email || !subject || !message) {
+    showStatus('⚠️ Please fill in all fields.', true);
+    return false;
+  }
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    showStatus('⚠️ Please enter a valid email address.', true);
+    return false;
+  }
+  
+  return { fname, lname, email, subject, message };
+}
+
+// Send email function
+async function sendEmail(e) {
+  e?.preventDefault();
+  
+  const validation = validateForm();
+  if (!validation) return;
+  
+  const { fname, lname, email, subject, message } = validation;
+  
+  // 🔁 REPLACE THESE THREE WITH YOUR REAL EmailJS KEYS
+  const SERVICE_ID  = 'service_fllmw69';
+  const TEMPLATE_ID = 'template_t2kucvg';
+  
+  const templateParams = {
+    name: `${fname} ${lname}`.trim(),
+    email: email,
+    subject: subject,
+    message: message,
+    time: new Date().toLocaleString(),
+  };
+  
+  sendBtn.disabled = true;
+  sendBtn.textContent = 'Sending...';
+  sendBtn.style.opacity = '0.7';
+  
+  try {
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+    showStatus('✓ Message sent successfully!');
+    // clear form
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+  } catch (error) {
+    console.error(error);
+    showStatus('❌ Failed to send. Please try again.', true);
+  } finally {
+    sendBtn.disabled = false;
+    sendBtn.textContent = 'Send Message';
+    sendBtn.style.opacity = '1';
+  }
+}
+
+// Attach event listener to send button
+if (sendBtn) {
+  sendBtn.addEventListener('click', sendEmail);
+}
+
+// Also allow pressing Enter in any field to send? (Optional: not added to avoid accidental sends)

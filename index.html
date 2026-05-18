@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -58,20 +60,6 @@
       </div>
       <div class="hero-photo-deco"></div>
       <div class="hero-photo-deco2"></div>
-      <!--<div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Years Exp.</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">40</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">28</div>
-          <div class="stat-label">Clients</div>
-        </div>
-      </div>-->
     </div>
   </div>
 
@@ -278,26 +266,27 @@
       <div class="form-row">
         <div class="form-group">
           <label for="fname">First Name</label>
-          <input type="text" id="fname" placeholder="Allan"/>
+          <input type="text" id="fname" placeholder="Allan" />
         </div>
         <div class="form-group">
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" placeholder="Casio"/>
+          <input type="text" id="lname" placeholder="Casio" />
         </div>
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="allan@example.com"/>
+        <input type="email" id="email" placeholder="allan@example.com" />
       </div>
       <div class="form-group">
         <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder=""/>
+        <input type="text" id="subject" placeholder="Project inquiry" />
       </div>
       <div class="form-group">
         <label for="message">Message</label>
         <textarea id="message" rows="6" placeholder="Hello Allan, I wanted to discuss..."></textarea>
       </div>
-      <button class="btn-primary" style="align-self:flex-start; border:none; padding:1rem 2.5rem; font-size:0.75rem;">Send Message</button>
+      <button class="btn-primary" id="sendMessageBtn" style="align-self:flex-start; border:none; padding:1rem 2.5rem; font-size:0.75rem;">Send Message</button>
+      <div id="form-status" class="form-status"></div>
     </div>
   </div>
 </section>
